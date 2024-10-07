@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url('img/bg.png') no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+
+    width: 100%;
+    max-width: 550px;
+   
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 0px 30px rgba(25, 26, 29, 0.87);
+    border: 2px solid rgba(255.255.255.0.18);
+    animation: zoomin 1s ease forwards;background-color: rgba(73, 74, 70, 0.448);
+}
+
+.wrapper .title h1 {
+    color: #fdfff8;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: slidetop 3s ease forwards;
+}
+
+.contact-form {
+
+    display: flex;
+
+    align-content: center;
+    justify-content: center;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+    width: 100%;
+}
+
+.input-fields input,
+textarea {
+    animation: slideright 3s ease forwards;
+    margin: 10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #101210;
+    padding: 10px;
+    color: #fefefe;
+    width: 100%;
+}
+
+.msg textarea {
+    height: 212px;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fbfcfd;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #c5ecfd;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #c5ecfd;
+}
+
+button {
+    background: #072e39;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: slidebot 3s ease forwards;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .msg textarea {
+        height: 80px;
+    }
+
+    .input-fields,
+    .msg {
+        width: 100%;
+    }
+}
+
+
+/* Animation */
+/* animation: slideright 3s ease forwards; */
+@keyframes slideleft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideright{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slidetop{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slidebot{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes zoomin{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
